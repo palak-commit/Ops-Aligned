@@ -1,3 +1,5 @@
+import NewsletterOptIn from "../components/NewsletterOptIn";
+
 export default function WorkflowArticle() {
   return (
     <div className="container" style={{ padding: "var(--spacing-md) 0", display: "flex", gap: "var(--spacing-lg)" }}>
@@ -91,6 +93,9 @@ export default function WorkflowArticle() {
           <button className="btn btn-primary" style={{ width: "100%", marginBottom: "0.5rem" }}>Duplicate Template</button>
           <button className="btn" style={{ width: "100%", border: "1px solid var(--border-color)" }}>Download JSON</button>
         </div>
+
+        {/* Newsletter Opt-In */}
+        <NewsletterOptIn />
       </aside>
 
       <style dangerouslySetInnerHTML={{__html: `
