@@ -26,6 +26,8 @@ export const metadata = {
   }
 };
 
+import CookieBanner from "./components/CookieBanner";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -34,7 +36,6 @@ export default function RootLayout({ children }) {
           <div className="container nav">
             <a href="/" className="logo">OpsAligned</a>
             <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-              <input type="search" placeholder="Search workflows..." style={{ padding: "0.25rem 0.5rem", borderRadius: "4px", border: "1px solid var(--border-color)", fontSize: "0.875rem", backgroundColor: "var(--bg-color)", color: "var(--text-primary)" }} />
               <nav className="nav-links">
                 <a href="/workflows">Workflows</a>
                 <a href="/templates">Templates</a>
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
           </div>
         </header>
         <main>{children}</main>
+        <CookieBanner />
         <footer style={{ borderTop: "1px solid var(--border-color)", padding: "var(--spacing-md) 0", marginTop: "var(--spacing-xl)" }}>
           <div className="container" style={{ display: "flex", justifyContent: "space-between", color: "var(--text-secondary)", fontSize: "0.875rem" }}>
             <span>© 2026 OpsAligned. All rights reserved.</span>

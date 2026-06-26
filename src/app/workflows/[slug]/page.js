@@ -1,6 +1,27 @@
 export default function WorkflowArticle() {
   return (
     <div className="container" style={{ padding: "var(--spacing-md) 0", display: "flex", gap: "var(--spacing-lg)" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to build a freelance CRM in Notion",
+        "author": { "@type": "Organization", "name": "OpsAligned" },
+        "datePublished": "2026-03-15",
+        "dateModified": "2026-03-15"
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Can Notion replace Salesforce for small agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While Notion lacks native email sequencing, it is more than capable of managing a pipeline for agencies with fewer than 50 active clients."
+          }
+        }]
+      })}} />
+      
       {/* Main Content */}
       <article style={{ flex: "1", maxWidth: "var(--reading-width)" }}>
         <div style={{ marginBottom: "var(--spacing-md)" }}>
