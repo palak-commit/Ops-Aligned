@@ -1,4 +1,4 @@
-import NewsletterOptIn from "../components/NewsletterOptIn";
+import NewsletterOptIn from "../../components/NewsletterOptIn";
 
 export default function WorkflowArticle() {
   return (
