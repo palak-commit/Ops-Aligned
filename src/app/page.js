@@ -11,7 +11,7 @@ export default function Home() {
         <h2 style={{ fontSize: "1.25rem", color: "var(--text-secondary)", fontWeight: 500 }}>Latest Notion Implementations</h2>
         
         <div className="grid">
-          <a href="/notion/crm-freelancers" className="card">
+          <a href="/workflows/notion-crm-freelancers" className="card">
             <span className="tag">CRM & Sales</span>
             <h3 className="mb-2" style={{ marginTop: 0 }}>Freelance CRM Dashboard</h3>
             <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Automate lead capture and track your entire sales pipeline within Notion.</p>
@@ -21,7 +21,7 @@ export default function Home() {
             </div>
           </a>
 
-          <a href="/notion/project-management-agency" className="card">
+          <a href="/workflows/notion-project-management-agency" className="card">
             <span className="tag">Project Mgmt</span>
             <h3 className="mb-2" style={{ marginTop: 0 }}>Agency Project OS</h3>
             <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Manage remote teams, sprint planning, and client deliverables using Notion relations.</p>
@@ -32,7 +32,7 @@ export default function Home() {
             </div>
           </a>
 
-          <a href="/notion/recurring-invoices" className="card">
+          <a href="/workflows/notion-recurring-invoices" className="card">
             <span className="tag">Automation</span>
             <h3 className="mb-2" style={{ marginTop: 0 }}>Recurring Invoices</h3>
             <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Learn how to automatically generate and track recurring invoices using Notion Buttons.</p>
