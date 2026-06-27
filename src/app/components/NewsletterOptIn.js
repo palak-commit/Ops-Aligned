@@ -1,3 +1,5 @@
+"use client";
+
 export default function NewsletterOptIn() {
   return (
     <div style={{ padding: "var(--spacing-md)", backgroundColor: "var(--bg-color-alt)", border: "1px solid var(--border-color)", borderRadius: "8px", marginTop: "var(--spacing-lg)" }}>
