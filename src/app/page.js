@@ -1,4 +1,8 @@
+import { getAllArticles } from "../lib/articles";
+
 export default function Home() {
+  const latest = getAllArticles().slice(0, 6);
+
   return (
     <div className="container">
       <section className="hero">
@@ -8,39 +12,21 @@ export default function Home() {
       </section>
 
       <section style={{ marginTop: "var(--spacing-xl)" }}>
-        <h2 style={{ fontSize: "1.25rem", color: "var(--text-secondary)", fontWeight: 500 }}>Latest Notion Implementations</h2>
-        
+        <h2 style={{ fontSize: "1.25rem", color: "var(--text-secondary)", fontWeight: 500 }}>Latest Implementations</h2>
+
         <div className="grid">
-          <a href="/workflows/notion-crm-freelancers" className="card">
-            <span className="tag">CRM & Sales</span>
-            <h3 className="mb-2" style={{ marginTop: 0 }}>Freelance CRM Dashboard</h3>
-            <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Automate lead capture and track your entire sales pipeline within Notion.</p>
-            <div style={{ marginTop: "1rem", display: "flex", gap: "0.5rem", fontSize: "0.75rem", color: "var(--text-secondary)" }}>
-              <span>✓ Template</span>
-              <span>✓ Video</span>
-            </div>
-          </a>
-
-          <a href="/workflows/notion-project-management-agency" className="card">
-            <span className="tag">Project Mgmt</span>
-            <h3 className="mb-2" style={{ marginTop: 0 }}>Agency Project OS</h3>
-            <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Manage remote teams, sprint planning, and client deliverables using Notion relations.</p>
-            <div style={{ marginTop: "1rem", display: "flex", gap: "0.5rem", fontSize: "0.75rem", color: "var(--text-secondary)" }}>
-              <span>✓ Template</span>
-              <span>✓ Video</span>
-              <span>✓ Diagram</span>
-            </div>
-          </a>
-
-          <a href="/workflows/notion-recurring-invoices" className="card">
-            <span className="tag">Automation</span>
-            <h3 className="mb-2" style={{ marginTop: 0 }}>Recurring Invoices</h3>
-            <p className="text-secondary" style={{ fontSize: "0.875rem" }}>Learn how to automatically generate and track recurring invoices using Notion Buttons.</p>
-            <div style={{ marginTop: "1rem", display: "flex", gap: "0.5rem", fontSize: "0.75rem", color: "var(--text-secondary)" }}>
-              <span>✓ JSON</span>
-              <span>✓ Video</span>
-            </div>
-          </a>
+          {latest.map((a) => (
+            <a key={a.slug} href={`/workflows/${a.slug}`} className="card">
+              <span className="tag">{a.category}</span>
+              <h3 className="mb-2" style={{ marginTop: 0, fontSize: "1.1rem" }}>{a.title}</h3>
+              <p className="text-secondary" style={{ fontSize: "0.875rem" }}>{a.excerpt}</p>
+              <div style={{ marginTop: "1rem", display: "flex", gap: "0.75rem", fontSize: "0.75rem", color: "var(--text-secondary)" }}>
+                <span>{a.intent}</span>
+                <span>•</span>
+                <span>{a.readingTime} min read</span>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
